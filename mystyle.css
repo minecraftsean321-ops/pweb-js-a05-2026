@@ -1,0 +1,32 @@
+body{
+    background-color: #DDD8CA;
+    font-family: Fraunces;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B4427;
+    color: white;
+    padding: 8px;
+
+
+}
+
+.navbar .navbar-left{
+    padding-left: 8px;
+}
+
+.navbar .navbar-middle {
+    display: flex;
+    gap: 32px;
+    
+}
+
+.navbar .navbar-right {
+    display: flex;
+    gap: 16px;
+    padding-right: 8px;
+}
