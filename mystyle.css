@@ -12,21 +12,35 @@ body{
     color: white;
     padding: 8px;
 
-
 }
 
 .navbar .navbar-left{
     padding-left: 8px;
+    cursor: pointer;
 }
 
 .navbar .navbar-middle {
     display: flex;
     gap: 32px;
-    
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    color: #C8D6AF;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
 }
 
 .navbar .navbar-right {
     display: flex;
     gap: 16px;
     padding-right: 8px;
+    cursor: pointer;
+}
+
+.navbar-right input {
+    border-radius: 12px;
 }
