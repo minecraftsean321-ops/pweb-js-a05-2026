@@ -1,6 +1,7 @@
 body{
     background-color: #DDD8CA;
     font-family: Inter;
+    
 
 }
 
@@ -57,8 +58,10 @@ body{
 
 .catalog {
     display: flex;
-    justify-content: space-between;
-    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 
 }
 
@@ -73,23 +76,31 @@ body{
     background-color: white;
 }
 
-.catalog .card {
+.catalog .product-card {
+
     color:#3B4427;
     padding: 16px;
     border: 1px solid #e0dad0;
+    width: 250px;
 }
 
-.catalog .card img {
-    width: 275px;
-   
+.catalog .product-tumbnail {
+    width: 100%;
+    height: 200px; /* Tentukan tinggi konsisten */
+    object-fit: contain; /* Agar seluruh bentuk produk terlihat utuh */
+    background-color: #fff;
+    display: block;
 }
 
-.catalog .card .content button {
+.catalog .product-card button {
     background-color: #3B4427;
     color: white;
+    cursor: pointer;
     border-radius: 12px;
     padding: 6px;
     width: 100%;
-    
-   
+}
+
+.catalog .product-card button:hover{
+   background-color: #1B2E1E;
 }

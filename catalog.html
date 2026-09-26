@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="catalog.js" defer></script>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +29,7 @@
         </div>
 
         <div class="navbar-right">
-        <input type="text" placeholder="Search for our product">
+        <input type="text" id="search-input" placeholder="Search for our product">
         <div>Cart</div>
         <div>Profil</div>   
         </div>
@@ -51,50 +50,10 @@
 
     </div>
     
-    <div class="catalog"> 
-
-        <div class="card">
-            
-            <img src="Assets/tote_bag.webp" alt="Gambar totebag bagus">
-            <div class="content">
-             <p>Tote Bag</p>
-             <p>From $15.00</p>
-             <button type="button">Add to cart</button>
-            </div>
-
-        </div>
-        <div class="card">
-            
-            <img src="Assets/bamboo_straws.webp" alt="Gambar sedotan dari bambu">
-            <div class="content">
-             <p>Reusable Bamboo Straws</p>
-             <p>From $10.00</p>
-             <button type="button">Add to cart</button>
-            </div>
-
-        </div>
-        <div class="card">
-            
-            <img src="Assets/tumbler.webp" alt="Gambar sedotan dari bambu">
-            <div class="content">
-             <p>Eco-friendly Tumbler</p>
-             <p>From $20.00</p>
-             <button type="button">Add to cart</button>
-            </div>
-
-        </div>
-        <div class="card">
-            
-            <img src="Assets/paper_plate.webp" alt="Gambar piring dari kertas">
-            <div class="content">
-             <p>Compostable Brown Paper Plate</p>
-             <p>From $31.00</p>
-             <button type="button">Add to cart</button>
-            </div>
-
-        </div>
-        
+    <div id="catalog" class="catalog"> 
 
     </div>
+
+    <script src="catalog.js" defer></script>
 </body>
 </html>
