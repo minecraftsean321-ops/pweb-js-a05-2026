@@ -1,6 +1,6 @@
 body{
     background-color: #DDD8CA;
-    font-family: Fraunces;
+    font-family: Inter;
 
 }
 
@@ -35,11 +35,61 @@ body{
 
 .navbar .navbar-right {
     display: flex;
-    gap: 16px;
+    gap: 32px;
     padding-right: 8px;
     cursor: pointer;
 }
 
 .navbar-right input {
     border-radius: 12px;
+}
+
+.advert {
+    display: flex;
+    align-items: center;
+    background-image: url(Assets/deep_forest.jpg);
+    background-size: cover;
+    color: white;
+    height: 500px;
+    font-size: 32px;
+    padding: 16px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+
+}
+
+.header-catalog {
+    display: flex;
+    flex-direction: column;
+    color: #3B4427;
+
+}
+
+.catalog div {
+    background-color: white;
+}
+
+.catalog .card {
+    color:#3B4427;
+    padding: 16px;
+    border: 1px solid #e0dad0;
+}
+
+.catalog .card img {
+    width: 275px;
+   
+}
+
+.catalog .card .content button {
+    background-color: #3B4427;
+    color: white;
+    border-radius: 12px;
+    padding: 6px;
+    width: 100%;
+    
+   
 }
