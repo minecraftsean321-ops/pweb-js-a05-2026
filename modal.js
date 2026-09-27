@@ -54,4 +54,88 @@ const addToCart = productBox => {
     `;
 
     cartContent.appendChild(cartBox);
+
+    cartBox.querySelector(".cart-remove").addEventListener("click", () => {
+        cartBox.remove();
+
+        updateTotalPrice();
+        updateCartCount(-1);
+    });
+
+    cartBox.querySelector(".cart-quantity").addEventListener("click", event => {
+        const numberElement = cartBox.querySelector(".number");
+        const decrementButton = cartBox.querySelector("#decrement");
+        let quantity = numberElement.textContent;
+
+        if (event.target.id === "decrement" && quantity > 1) {
+            quantity--;
+
+            if(quantity === 1){
+                decrementButton.style.color = "#999";
+            }
+
+        } else if (event.target.id === "increment") {
+                quantity++;
+                decrementButton.style.color = "#333";
+            }
+
+            numberElement.textContent = quantity;
+
+            updateTotalPrice();
+
+    });
+
+    updateTotalPrice();
+
+    updateCartCount(1);
 };
+
+const updateTotalPrice = () => {
+    const totalPriceElement = document.querySelector(".total-price");
+    const cartBoxes= cartContent.querySelectorAll(".cart-box");
+    let total = 0;
+    cartBoxes.forEach(cartBox => {
+        const totalPriceElement= cartBox.querySelector(".cart-price");
+        const quantityElement= cartBox.querySelector(".number");
+        const price = totalPriceElement.textContent.replace("$", "")
+        const quantity = quantityElement.textContent;
+        total += price * quantity;
+    });
+    totalPriceElement.textContent = `$${total.toFixed(2)}`;
+
+};
+
+let cartItemCount = 0;
+const updateCartCount = change => {
+    const cartItemCountBadge = document.querySelector(".cart-item-count");
+    cartItemCount += change;
+    if (cartItemCount > 0) {
+        cartItemCountBadge.style.visibility = "visible";
+        cartItemCountBadge.textContent= cartItemCount;
+    } else{
+        cartItemCountBadge.style.visibility = "hidden";
+        cartItemCountBadge.textContent = "";
+    }
+
+};
+
+//Fungsi untuk tombol beli
+const buyNowButton = document.querySelector(".btn-buy");
+buyNowButton.addEventListener("click", () => {
+    const cartBoxes = cartContent.querySelectorAll(".cart-box");
+    if (cartBoxes.length === 0){
+        alert("Your cart is empty. Please add items to your cart before buying.");
+        return;
+
+    }
+
+    cartBoxes.forEach(cartBoxes => cartBoxes.remove());
+
+    cartItemCount = 0;
+    updateCartCount(0);
+
+    updateTotalPrice();
+
+    alert("Thank you for your purchase!")
+
+});
