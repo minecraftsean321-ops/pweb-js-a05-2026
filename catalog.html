@@ -92,9 +92,30 @@
         <p>Discover our most loved eco-friendly products.</p>
 
     </div>
-    
-    <div id="catalog" class="catalog"> 
 
+    <div class="controls-container">
+        <select id="category-filter">
+            <option value="all">Semua Kategori</option>
+        </select>
+        <select id="sort-filter">
+            <option value="default">Urutkan: Default</option>
+            <option value="price-asc">Harga: Termurah</option>
+            <option value="price-desc">Harga: Termahal</option>
+            <option value="rating-desc">Rating: Tertinggi</option>
+        </select>
+    </div>
+    
+    <div id="catalog" class="catalog"> </div>
+
+    <div class="load-more-container">
+        <button id="load-more-btn" style="display: none;">Load More</button>
+    </div>
+
+    <div id="product-modal" class="product-modal">
+        <div class="product-modal-content">
+            <span class="close-modal" id="close-product-modal">&times;</span>
+            <div id="product-modal-body"></div>
+        </div>
     </div>
 
     <script src="catalog.js" defer></script>

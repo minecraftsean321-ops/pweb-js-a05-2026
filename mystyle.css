@@ -274,3 +274,85 @@ body{
     font-size: 35px;
     cursor: pointer;
 }
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 30px 30px;
+}
+
+.controls-container select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #c9c5b8;
+    background-color: white;
+    color: #3B4427;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+#load-more-btn {
+    background-color: #3B4427;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#load-more-btn:hover {
+    background-color: #1B2E1E;
+}
+
+.product-modal {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: #3B4427;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-modal:hover {
+    color: #3B4427;
+}
+
+#product-modal-body p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
