@@ -112,3 +112,5 @@ searchInput.addEventListener('input', debouncedSearch);
 
 // Inisialisasi pengambilan data saat halaman selesai dimuat
 document.addEventListener('DOMContentLoaded', fetchProducts);
+
+
