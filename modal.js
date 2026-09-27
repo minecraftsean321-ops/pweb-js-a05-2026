@@ -9,6 +9,27 @@ cartClose.addEventListener("click", () => cart.classList.remove("active"));
 const cartContent = document.querySelector(".cart-content")
 const catalogContainer = document.getElementById("catalog");
 
+//Ambil data dari local storage
+function getCart () {
+    const cart = localStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : [];
+}
+
+function saveCart(cart){
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
+}
+
+//Delete
+function removeFromCart(id) {
+    let cart = getCart();
+    cart = cart.filter(item => item.id !== id);
+    saveCart(cart);
+}
+
+
+
+
 // Menggunakan Event Delegation pada container katalog
 catalogContainer.addEventListener("click", event => {
     // Cek apakah yang diklik adalah tombol tambah keranjang
