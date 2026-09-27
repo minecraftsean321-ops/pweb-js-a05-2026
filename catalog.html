@@ -13,6 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+
 </head>
 
 <body>
@@ -30,10 +35,47 @@
 
         <div class="navbar-right">
         <input type="text" id="search-input" placeholder="Search for our product">
-        <div>Cart</div>
-        <div>Profil</div>   
+
+        <div id="cart">
+        <i class="ri-shopping-bag-line"></i>
+        <span class="cart-item-count"></span>
         </div>
 
+        <div id="profil">
+        <i class="ri-user-line"></i> 
+        </div>
+
+        </div>
+
+    </div>
+
+    <div class="cart-modal">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="/Assets/tote_bag.webp" class="cart-img" alt="Gambar tote bag bagus">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Tote Bag</h2>
+                    <span class="cart-price">$20.00</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="ri-delete-bin-line cart-remove"></i>
+
+            </div> -->
+
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class="ri-close-line" id="cart-close"></i>
+        </div>
 
     </div>
 
@@ -55,5 +97,6 @@
     </div>
 
     <script src="catalog.js" defer></script>
+    <script src="modal.js"></script>
 </body>
 </html>
